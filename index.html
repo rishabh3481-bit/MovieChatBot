@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <span>MovieBot</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Popular</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> Categories</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="settings-toggle">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">Movie Recommendation Chatbot</h1>
+            <p class="subtitle">Get personalized movie recommendations based on your mood!</p>
+        </header>
+        
+        <div class="chat-container">
+            <div id="chatBox" class="chat-box"></div>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        
+        <div class="settings-panel">
+            <div class="settings-header">
+                <h3>Settings</h3>
+                <button id="closeSettingsBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="settings-content">
+                <div class="setting-group">
+                    <h4>Theme</h4>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <div class="setting-group">
+                    <h4>Font Size</h4>
+                    <div class="font-size-buttons">
+                        <button class="font-size-btn" data-size="small">Small</button>
+                        <button class="font-size-btn active" data-size="medium">Medium</button>
+                        <button class="font-size-btn" data-size="large">Large</button>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <h4>Your Name</h4>
+                    <div class="name-input-group">
+                        <input type="text" id="nameInput" placeholder="Enter your name">
+                        <button id="saveNameBtn">Save</button>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <h4>Favorite Genres</h4>
+                    <div class="genre-checkboxes">
+                        <label><input type="checkbox" value="action"> Action</label>
+                        <label><input type="checkbox" value="comedy"> Comedy</label>
+                        <label><input type="checkbox" value="drama"> Drama</label>
+                        <label><input type="checkbox" value="sciFi"> Sci-Fi</label>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <h4>Your Watchlist</h4>
+                    <div id="watchlist" class="watchlist"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Made by: 
+            <span class="team-member">Rishabh (12316974)</span> | 
+            <span class="team-member">Harsh (12313282)</span> | 
+            <span class="team-member">Divyansh (1230880)</span>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
